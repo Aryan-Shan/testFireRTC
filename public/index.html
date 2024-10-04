@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple One-to-One Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
+    <script src="https://cdn.rawgit.com/webrtc/samples/gh-pages/src/js/main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>One-to-One Chat App</h1>
+        <div id="usernamePrompt" class="prompt">
+            <label for="username">Enter your username:</label>
+            <input type="text" id="username" placeholder="Username">
+            <button id="submitUsername">Submit</button>
+        </div>
+        <div id="chatArea" class="hidden">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+            <button id="startCall">Start Call</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
